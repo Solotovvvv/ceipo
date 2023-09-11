@@ -19,16 +19,30 @@ $data = [];
 
 if ($stmt->execute()) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
- 
+        $businessStatus = '';
+        if ($row['BusinessStatus'] == 3) {
+            $businessStatus = 'Pending';
+        } elseif ($row['BusinessStatus'] == 1) {
+            $businessStatus = 'Passed';
+        }
+
+        $storeButtonId = 'storeButton_' . $row['bus_id'];
+        
         $subarray = [
             '<td>' . $row['BusinessName'] . '</td>',
             '<td>' . $row['owner_name'] . '</td>',
             '<td>' . $row['category'] . '</td>',
-            '<td>' . $row['BusinessStatus'] . '</td>',
+            '<td>' . $businessStatus. '</td>',
           
-            '<td><button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#view">
+            '<td><button type="button" class="btn btn-warning btn-sm" onclick="approval_status(' .$row['bus_id'] . ')">
             <i class="bx bx-show-alt"></i>
-        </button></td>',
+        </button>
+        <button type="button" id="' . $storeButtonId . '" class="btn btn-success btn-sm" onclick="Store(' . $row['bus_id'] . ')" ' . ($row['BusinessStatus'] != 1 ? 'disabled' : '') . '>
+        <i class="bx bx-check-circle"></i>
+    </button>
+        
+        
+        </td>',
         ];
         $data[] = $subarray;
     }

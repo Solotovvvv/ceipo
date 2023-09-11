@@ -229,7 +229,7 @@
                       <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="modalCenterTitle">Modal title</h5>
+                            <h5 class="modal-title" id="modalCenterTitle">Business Applicant</h5>
                             <button
                               type="button"
                               class="btn-close"
@@ -238,176 +238,312 @@
                             ></button>
                           </div>
                           <div class="modal-body">
-              <div class="stepper-container">
-                  <!-- Step 1 -->
-                  <div class="stepper-content active" id="step1">
-                      <h3>DETAILS</h3>
-                      <div class="row">
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Business Name</label>
-                                <input
-                                  type="text"
-                                  id="business_name"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Business Branch</label>
-                                <input
-                                  type="text"
-                                  id="branch"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>
+                                <div class="stepper-container">
+                                    <!-- Step 1 -->
+                                    <div class="stepper-content active" id="step1">
+                                        <h3>DETAILS</h3>
+                                        <div class="row">
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Business Name</label>
+                                                  <input
+                                                    type="text"
+                                                    id="business_name"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Business Branch</label>
+                                                  <input
+                                                    type="text"
+                                                    id="branch"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
 
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Cardinal Location</label>
-                                <input
-                                  type="text"
-                                  id="cardinal_location"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>
-                            </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Cardinal Location</label>
+                                                  <input
+                                                    type="text"
+                                                    id="cardinal_location"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                              </div>
 
-                            <div class="row">
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Business Category</label>
-                                <input
-                                  type="text"
-                                  id="category"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Business Sub-Category</label>
-                                <input
-                                  type="text"
-                                  id="sub_category"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>                            
-                            </div>
+                                              <div class="row">
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Business Category</label>
+                                                  <input
+                                                    type="text"
+                                                    id="category"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Business Sub-Category</label>
+                                                  <input
+                                                    type="text"
+                                                    id="sub_category"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>                            
+                                              </div>
 
 
-                            <div class="row">
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Business Owner</label>
-                                <input
-                                  type="text"
-                                  id="Owner"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Established</label>
-                                <input
-                                  type="text"
-                                  id="date"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>  
+                                              <div class="row">
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Business Owner</label>
+                                                  <input
+                                                    type="text"
+                                                    id="owner"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Established</label>
+                                                  <input
+                                                    type="text"
+                                                    id="date"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>  
 
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Opening-Closing Hours</label>
-                                <input
-                                  type="text"
-                                  id="hours_operated"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>    
-                              
-                            </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Opening-Closing Hours</label>
+                                                  <input
+                                                    type="text"
+                                                    id="hours_operated"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>    
+                                                
+                                              </div>
 
-                            <div class="row">
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Address</label>
-                                <input
-                                  type="text"
-                                  id="address"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Barangay</label>
-                                <input
-                                  type="text"
-                                  id="barangay"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>  
+                                              <div class="row">
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Address</label>
+                                                  <input
+                                                    type="text"
+                                                    id="address"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Barangay</label>
+                                                  <input
+                                                    type="text"
+                                                    id="barangay"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>  
 
-                              <div class="col mb-3">
-                                <label for="nameWithTitle" class="form-label">Zone</label>
-                                <input
-                                  type="text"
-                                  id="zone"
-                                  class="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>    
-                            </div>
-                    </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Zone</label>
+                                                  <input
+                                                    type="text"
+                                                    id="zone"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>    
+                                              </div>
+                                      </div>
 
                   <!-- Step 2 -->
                   <div class="stepper-content" id="step2">
-                      <h3>Step 2</h3>
-                      <p>This is the content of Step 2.</p>
+                      <h3>Brgy Clearance</h3>
+                      <img id="busBrgyClearanceImage" src="" alt="Barangay Clearance" style="max-width: 100%; max-height: 100%; width: auto; height: auto;">
+                      <p class="no-image-text" style="display: none;">No requirements found</p>
+                      <!-- Other content for Step 2 here -->
                   </div>
-                   <!-- Step 3 -->
-                   <div class="stepper-content" id="step3">
-                      <h3>Step 3</h3>
-                      <p>This is the content of Step 2.</p>
+
+                  <!-- Step 3 -->
+                  <div class="stepper-content" id="step3">
+                      <h3>DTI Permit</h3>
+                      <img id="busDtiPermitImage" src="" alt="DTI Permit" style="max-width: 100%; max-height: 100%; width: auto; height: auto;">
+                      <p class="no-image-text" style="display: none;">No requirements found</p>
+                      <!-- Other content for Step 3 here -->
                   </div>
-                   <!-- Step 4-->
-                   <div class="stepper-content" id="step4">
-                      <h3>Step 4</h3>
-                      <p>This is the content of Step 2.</p>
+
+                  <!-- Step 4 -->
+                  <div class="stepper-content" id="step4">
+                      <h3>Sanitary Permit</h3>
+                      <img id="busSanitaryPermitImage" src="" alt="Sanitary Permit" style="max-width: 100%; max-height: 100%; width: auto; height: auto;">
+                      <p class="no-image-text" style="display: none;">No requirements found</p>
+                      <!-- Other content for Step 4 here -->
                   </div>
-                    <!-- Step 5-->
+
+                  <!-- Step 5 -->
                   <div class="stepper-content" id="step5">
-                      <h3>Step 5</h3>
-                      <p>This is the content of Step 2.</p>
+                      <h3> Cedula </h3>
+                      <img id="busCedulaImage" src="" alt="Cedula" style="max-width: 100%; max-height: 100%; width: auto; height: auto;">
+                      <p class="no-image-text" style="display: none;">No requirements found</p>
+                      <!-- Other content for Step 5 here -->
                   </div>
-                     <!-- Step 6-->
-                     <div class="stepper-content" id="step6">
-                      <h3>Step 6</h3>
-                      <p>This is the content of Step 2.</p>
+
+                  <!-- Step 6 -->
+                  <div class="stepper-content" id="step6">
+                      <h3>Mayors Permit</h3>
+                      <img id="busMayorPermitImage" src="" alt="Mayor's Permit" style="max-width: 100%; max-height: 100%; width: auto; height: auto;">
+                      <p class="no-image-text" style="display: none;">No requirements found</p>
+                      <!-- Other content for Step 6 here -->
                   </div>
+
+
                   <!-- Step 7-->
                   <div class="stepper-content" id="step7">
-                      <h3>Step 7</h3>
-                      <p>This is the content of Step 2.</p>
+                      <h3>Status</h3>
+                              <div class="row">
+                                <div class="col mb-3">
+                                  <label for="nameWithTitle" class="form-label">Status</label>
+                                  <select id="status" class="form-select">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="1">PASSED</option>
+                                    <option value="3">REMARKS</option>
+                                  </select>
+                                </div>
+                            </div>
+
+                            
+                            <div class="row" id="remarksRow">
+                                <div class="col mb-3">
+                                  <label for="nameWithTitle" class="form-label">Enter a Remarks</label>
+                                  <input
+                                    type="text"
+                                    id="remarks"
+                                    class="form-control"
+                                    placeholder="Enter Name"
+                                  />
+                                   </div>
+                                </div>
+
+  
                   </div>          
-                </div>                                                                 
-              <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>          
+                    </div>                                                                 
+                  <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>          
            
-             </div>
+                      </div>
                           <div class="modal-footer">
-                          <input type="hidden" id="hiddendata">
+                          <input type="text" id="hiddendata">
                           <button type="button" class="btn btn-primary" id="prevStep">Previous</button>
                             <button type="button" class="btn btn-primary" id="nextStep">Next</button>                            
-                            <button type="button" class="btn btn-success">Save changes</button>
+                           
+                            <button type="button" class="btn btn-success" data-dismiss="modal"
+                        onclick="update()">Save changes</button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+
+
+
+
+                 
+                  
+               </div>
+           </div>
+
+             <!-- modal view  -->
+             <div class="modal fade" id="bc" tabindex="-1" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalCenterTitle">Business Applicant</h5>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                                <div class="stepper-container">
+                                    <!-- Step 1 -->
+                                        <h3>DETAILS</h3>
+                                        <div class="row">
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Business Name</label>
+                                                  <input
+                                                    type="text"
+                                                    id="business_name_s"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Business Branch</label>
+                                                  <input
+                                                    type="text"
+                                                    id="branch_s"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                               
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Business Branch</label>
+                                                  <input
+                                                    type="text"
+                                                    id="status_s"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+            
+                                              </div>
+                      </div>
+                          <div class="modal-footer">
+                          <input type="text" id="hiddendata1">
+                                           
+                           
+                            <button type="button" class="btn btn-success" data-dismiss="modal"
+                        onclick="S()">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                 
+                  
+               </div>
+           </div>
+
+
+
+
     
 
   <script src="plugins/assets/vendor/libs/jquery/jquery.js"></script>
@@ -418,7 +554,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script>
-      $(document).ready(function () {
+$(document).ready(function () {
     
 
 
@@ -435,59 +571,166 @@
 
                 },
             });
+    
+                      
+                            var currentStep = 1;
+                            // Function to show the current step
+                            function showStep(step) {
+                                // Get the progress bar
+                                var progressBar = $(".progress-bar");
+
+                                // Set the progress bar value to the current step
+                                progressBar.css("width", ((step - 1) / 6) * 100 + "%");
+
+                                // Hide all stepper content
+                                $(".stepper-content").removeClass("active");
+
+                                // Show the current stepper content
+                                $("#step" + step).addClass("active");
+
+                                // Disable or enable Previous and Next buttons based on the current step
+                                if (step === 1) {
+                                    $("#prevStep").prop("disabled", true);
+                                } else {
+                                    $("#prevStep").prop("disabled", false);
+                                }
+
+                                if (step === 7) {
+                                    $("#nextStep").hide();
+                                } else {
+                                    $("#nextStep").show();
+                                }
+                            }
+                            // Next button click event
+                            $("#nextStep").click(function () {
+                                if (currentStep < 7) {
+                                    currentStep++;
+                                    showStep(currentStep);
+                                }
+                            });
+                            // Previous button click event
+                            $("#prevStep").click(function () {
+                                if (currentStep > 1) {
+                                    currentStep--;
+                                    showStep(currentStep);
+                                }
+                            });
+                            // Show the initial step
+                            showStep(currentStep);
+
+                              $('#view').on('show.bs.modal', function () {
+                                    currentStep = 1; // Reset the step to 1 when the modal is shown
+                                    showStep(currentStep);
+                              });
+});
+
+      
 
 
-        var currentStep = 1;
+function approval_status(views) {
+    $('#hiddendata').val(views);
+    $.post("approval_update.php", { views: views }, function (data, status) {
+        var userid = JSON.parse(data);
 
-// Function to show the current step
-function showStep(step) {
-    // Get the progress bar
-    var progressBar = $(".progress-bar");
+        // Update form fields with data
+        $('#business_name').val(userid.BusinessName);
+        $('#branch').val(userid.BusinessBranch);
+        $('#cardinal_location').val(userid.location);
+        $('#category').val(userid.category);
+        $('#sub_category').val(userid.subCategory);
+        $('#owner').val(userid.owner_name);
+        $('#date').val(userid.BusinessEstablish);
+        $('#hours_operated').val(userid.BusinessOpenHour + ' - ' + userid.BusinessCloseHour);
+        $('#address').val(userid.BusinessAddress);
+        $('#barangay').val(userid.barangay);
+        $('#zone').val(userid.zone);
 
-    // Set the progress bar value to the current step
-    progressBar.css("width", ((step - 1) / 6) * 100 + "%");
+        $('#status option[value="' + userid.BusinessStatus + '"]').prop('selected', true);
+        $('#remarks').val(userid.BusinessRemarks);
+       
 
-    // Hide all stepper content
-    $(".stepper-content").removeClass("active");
+        var imagePath = 'img/requirements/';
 
-    // Show the current stepper content
-    $("#step" + step).addClass("active");
 
-    // Disable or enable Previous and Next buttons based on the current step
-    if (step === 1) {
-        $("#prevStep").prop("disabled", true);
-    } else {
-        $("#prevStep").prop("disabled", false);
-    }
+        if (userid.BusinessStatus === "1") {
+    // Hide the remarks input field
+    $('#remarksRow').hide();
+    $('#remarks').val("");
+    $('#storeButton').prop('disabled', false);
 
-    if (step === 7) {
-        $("#nextStep").hide();
-    } else {
-        $("#nextStep").show();
-    }
+} else {
+    // Show the remarks input field
+    $('#remarksRow').show();
+    $('#storeButton').prop('disabled', true);
+
 }
 
-// Next button click event
-$("#nextStep").click(function () {
-    if (currentStep < 7) {
-        currentStep++;
-        showStep(currentStep);
+// Add an event listener to the #status element
+$('#status').on('change', function () {
+    // Check if the selected value is 3 and hide or show the #remarks field accordingly
+    if ($(this).val() === '3') {
+        $('#remarksRow').show();
+
+    } else {
+        $('#remarksRow').hide();
+        $('#remarks').val("");
+     
     }
 });
+        // Function to handle displaying images or "No requirements found" text
+        function displayImageOrText(imageId, imageName) {
+            var $imageElement = $('#' + imageId);
 
-// Previous button click event
-$("#prevStep").click(function () {
-    if (currentStep > 1) {
-        currentStep--;
+            if (imageName && imageName.trim() !== '') {
+                $imageElement.attr('src', imagePath + imageName);
+                $imageElement.show();
+                $imageElement.siblings('.no-image-text').hide();
+            } else {
+                $imageElement.hide();
+                $imageElement.siblings('.no-image-text').show();
+            }
+        }
+
+        // Populate and handle images for each step
+        displayImageOrText('busBrgyClearanceImage', userid.bus_brgyclearance);
+        displayImageOrText('busDtiPermitImage', userid.bus_dtipermit);
+        displayImageOrText('busSanitaryPermitImage', userid.bus_sanitarypermit);
+        displayImageOrText('busCedulaImage', userid.bus_cedula);
+        displayImageOrText('busMayorPermitImage', userid.bus_mayorpermit);
+
+        // Show Step 1 initially
+        currentStep = 1;
         showStep(currentStep);
-    }
-});
+    });
 
-// Show the initial step
-showStep(currentStep);
+    $('#view').modal("show");
+}
 
-      });
+
+function update() {
+    
+            var status = $('#status').val()
+            var remarks = $('#remarks').val();
+            var hiddendata = $('#hiddendata').val();
+
+            $.post("approval_update.php", {
+                status: status, hiddendata: hiddendata,remarks:remarks
+            }, function (data, status) {
+                var jsons = JSON.parse(data);
+                status = jsons.status;
+                if (status == 'success') {
+                    var update = $('#approval_tbl').DataTable().ajax.reload();
+                    alert("Saved")
+                }
+            });
+            $('#view').modal("hide");
+        }
+
+
+      
+
+
+
     </script>
-
 </body>
 </html>
