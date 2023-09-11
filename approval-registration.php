@@ -421,6 +421,7 @@
                                     <option value="" disabled selected>Select</option>
                                     <option value="1">PASSED</option>
                                     <option value="3">REMARKS</option>
+                                    <option value="2" style="display: none;">Pending</option>
                                   </select>
                                 </div>
                             </div>
@@ -468,8 +469,8 @@
                </div>
            </div>
 
-             <!-- modal view  -->
-             <div class="modal fade" id="bc" tabindex="-1" aria-hidden="true">
+             <!-- blockchain modal  -->
+             <div class="modal fade" id="blockchain" tabindex="-1" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -483,14 +484,13 @@
                           </div>
                           <div class="modal-body">
                                 <div class="stepper-container">
-                                    <!-- Step 1 -->
-                                        <h3>DETAILS</h3>
+                                
                                         <div class="row">
                                                 <div class="col mb-3">
                                                   <label for="nameWithTitle" class="form-label">Business Name</label>
                                                   <input
                                                     type="text"
-                                                    id="business_name_s"
+                                                    id="bc_businessname"
                                                     class="form-control"
                                                     placeholder="Enter Name"
                                                     readonly
@@ -500,7 +500,7 @@
                                                   <label for="nameWithTitle" class="form-label">Business Branch</label>
                                                   <input
                                                     type="text"
-                                                    id="branch_s"
+                                                    id="bc_branch"
                                                     class="form-control"
                                                     placeholder="Enter Name"
                                                     readonly
@@ -508,16 +508,79 @@
                                                 </div>
                                                
                                                 <div class="col mb-3">
-                                                  <label for="nameWithTitle" class="form-label">Business Branch</label>
+                                                  <label for="nameWithTitle" class="form-label">Owner</label>
                                                   <input
                                                     type="text"
-                                                    id="status_s"
+                                                    id="bc_owner"
                                                     class="form-control"
                                                     placeholder="Enter Name"
                                                     readonly
                                                   />
                                                 </div>
+
+
+                                                <div class="row">
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">BRGY CLEARANCE</label>
+                                                  <input
+                                                    type="text"
+                                                    id="bc_clearance"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">DTI PERMIT</label>
+                                                  <input
+                                                    type="text"
+                                                    id="bc_dti"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Sanitary</label>
+                                                  <input
+                                                    type="text"
+                                                    id="bc_sanitary"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                               
+                                                
             
+                                              </div>
+
+
+
+                                              <div class="row">
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Cedula</label>
+                                                  <input
+                                                    type="text"
+                                                    id="bc_cedula"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                                <div class="col mb-3">
+                                                  <label for="nameWithTitle" class="form-label">Mayors Permit</label>
+                                                  <input
+                                                    type="text"
+                                                    id="bc_permit"
+                                                    class="form-control"
+                                                    placeholder="Enter Name"
+                                                    readonly
+                                                  />
+                                                </div>
+                                               
+                                                
                                               </div>
                       </div>
                           <div class="modal-footer">
@@ -525,7 +588,7 @@
                                            
                            
                             <button type="button" class="btn btn-success" data-dismiss="modal"
-                        onclick="S()">Save changes</button>
+                        onclick="Save()">Save changes</button>
                           </div>
                         </div>
                       </div>
@@ -618,15 +681,16 @@ $(document).ready(function () {
                             // Show the initial step
                             showStep(currentStep);
 
-                              $('#view').on('show.bs.modal', function () {
+                            $('#view').on('show.bs.modal', function () {
                                     currentStep = 1; // Reset the step to 1 when the modal is shown
                                     showStep(currentStep);
-                              });
-});
+                            });
+
+
+                            });
 
       
-
-
+//Viewing
 function approval_status(views) {
     $('#hiddendata').val(views);
     $.post("approval_update.php", { views: views }, function (data, status) {
@@ -651,14 +715,17 @@ function approval_status(views) {
 
         var imagePath = 'img/requirements/';
 
+     
 
-        if (userid.BusinessStatus === "1") {
+        if (userid.BusinessStatus === "1" || userid.BusinessStatus === "2" ) {
     // Hide the remarks input field
     $('#remarksRow').hide();
     $('#remarks').val("");
     $('#storeButton').prop('disabled', false);
+    console.log('Enabling button');
 
-} else {
+}
+ else {
     // Show the remarks input field
     $('#remarksRow').show();
     $('#storeButton').prop('disabled', true);
@@ -706,9 +773,9 @@ $('#status').on('change', function () {
     $('#view').modal("show");
 }
 
-
-function update() {
-    
+// Viewing
+          function update() {
+  
             var status = $('#status').val()
             var remarks = $('#remarks').val();
             var hiddendata = $('#hiddendata').val();
@@ -720,17 +787,55 @@ function update() {
                 status = jsons.status;
                 if (status == 'success') {
                     var update = $('#approval_tbl').DataTable().ajax.reload();
+                    
                     alert("Saved")
                 }
             });
             $('#view').modal("hide");
-        }
-
-
-      
+};
 
 
 
-    </script>
+//blockchain-crud
+
+function Store(id){
+  $('#hiddendata1').val(id);
+  $.post("blockchain_approved.php", { id: id }, function (data,
+                status) {
+                var userids = JSON.parse(data);
+                $('#bc_businessname').val(userids.BusinessName);
+                $('#bc_branch').val(userids.BusinessBranch);
+                $('#bc_owner').val(userids.owner_name);
+                $('#bc_clearance').val(userids.bus_brgyclearance);
+                $('#bc_dti').val(userids.bus_dtipermit);
+                $('#bc_sanitary').val(userids.bus_sanitarypermit);
+                $('#bc_cedula').val(userids.bus_cedula);
+                $('#bc_permit').val(userids.bus_mayorpermit);
+              });
+  $('#blockchain').modal("show");
+}
+
+
+function Save() {
+  var hiddendata1 = $('#hiddendata1').val();
+  $.post("blockchain_approved.php", {
+    hiddendata1: hiddendata1
+  }, function (data, status) {
+    var jsons = JSON.parse(data);
+    status = jsons.status;
+    if (status == 'success') {
+      var update = $('#approval_tbl').DataTable().ajax.reload();
+      alert("Store in blockchain");
+    }
+  });
+  $('#blockchain').modal("hide");
+}
+
+        
+ </script>
+
+
+
+
 </body>
 </html>

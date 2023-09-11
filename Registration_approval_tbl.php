@@ -11,6 +11,7 @@ INNER JOIN owner_list AS ol ON bl.ownerId = ol.ID
 INNER JOIN brgyzone_list AS bz ON bl.BusinessBrgy = bz.ID
 INNER JOIN category_list as c ON bl.BusinessCategory = c.ID
 INNER JOIN subcategory_list as sc ON bl.BusinessSubCategory = sc.ID
+WHERE bl.BusinessStatus != '4' 
 ";
 $stmt = $pdo->prepare($sql);
 
@@ -21,9 +22,13 @@ if ($stmt->execute()) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $businessStatus = '';
         if ($row['BusinessStatus'] == 3) {
-            $businessStatus = 'Pending';
+            $businessStatus = 'Re-Evaluate';
         } elseif ($row['BusinessStatus'] == 1) {
             $businessStatus = 'Passed';
+        }elseif ($row['BusinessStatus']== 4){
+            $businessStatus = 'Approved';
+        }elseif ($row['BusinessStatus']== 2){
+            $businessStatus = 'Pending';
         }
 
         $storeButtonId = 'storeButton_' . $row['bus_id'];
