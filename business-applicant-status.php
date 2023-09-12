@@ -178,36 +178,17 @@
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table id="Ajax1" class="table table-bordered table-hover">
+                    <table id="Approved_tbl" class="table table-bordered table-hover">
                       <thead>
                         <tr>
-                          <th>ID</th>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
+                          <th>Business Company</th>
+                          <th>Owner</th>
+                          <th>Category</th>
+                          <th>Status</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <th>#</th>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 4.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td> 4</td>
-                        </tr>
-                        <tr>
-                          <th>#</th>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 5.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td>5</td>
-                        </tr>
-                      </tbody>
+                    
                     </table>
                   </div>
                 </div>
@@ -228,7 +209,7 @@
   <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script>
       $(document).ready(function () {
-        $('#Ajax1').DataTable();
+        $('#Approved_tbl').DataTable();
       });
     </script>
 
