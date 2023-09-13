@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
+  data-assets-path="plugins/assets/" data-template="vertical-menu-template-free">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Dashboard</title>
+  <meta name="description" content="">
+
+  <link rel="icon" type="image/x-icon" href="plugins/assets/img/favicon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="plugins/assets/vendor/fonts/boxicons.css">
+  <link rel="stylesheet" href="plugins/assets/vendor/css/core.css" class="template-customizer-core-css">
+  <link rel="stylesheet" href="plugins/assets/vendor/css/theme-default.css" class="template-customizer-theme-css">
+  <link rel="stylesheet" href="plugins/assets/css/demo.css">
+  <link rel="stylesheet" href="plugins/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+  <script src="plugins/assets/vendor/js/helpers.js"></script>
+  <script src="plugins/assets/js/config.js"></script>
+</head>
+
+<body>
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+            <a href="index.html" class="app-brand-link">
+                <span class="app-brand-logo demo">
+                    <img src="../BUSINESS CLIENT/plugins/assets/img/avatars/logo.png" alt="" class="brand-image" width="45" height="50">
+                </span>
+                <span
+                    class="text-uppercase text-white app-brand-text demo menu-text fw-bolder ms-2">BUSINESS</span>
+            </a>
+            <a href="javascript:void(0);"
+                class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+        </div>
+        <div class="menu-inner-shadow"></div>
+        <ul class="menu-inner py-1">
+            <li class="menu-header small text-uppercase">
+                <span class="menu-header-text">Business Profile</span>
+            </li>
+
+            <li class="menu-item">
+                <a href="bulletin.html" class="menu-link">
+                    <i class="menu-icon tf-icons bx bxs-pin"></i>
+                    <div data-i18n="Analytics">Bulletin Board</div>
+                </a>
+            </li>
+
+            <li class="menu-item active">
+                <a href="BusinessPanel.html" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-info-circle"></i>
+                    <div data-i18n="Analytics">Details</div>
+                </a>
+            </li>
+
+            <li class="menu-header small text-uppercase">
+                <span class="menu-header-text">Business Content</span>
+            </li>
+            <li class="menu-item">
+                <a href="feature-post.html" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-share"></i>
+                    <div data-i18n="Analytics">Feature Post</div>
+                </a>
+            </li>
+            
+              <li class="menu-item">
+                <a href="gallery.html" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-photo-album"></i>
+                  <div data-i18n="Analytics">Gallery</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="reply.html" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-message-rounded"></i>
+                  <div data-i18n="Analytics">Comments & Rating</div>
+                </a>
+              </li>
+              <li class="menu-header small text-uppercase">
+                <span class="menu-header-text">Business Document</span>
+            </li>
+            <li class="menu-item">
+                <a href="requirement.html" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-paperclip"></i>
+                  <div data-i18n="Analytics">Requirements</div>
+                </a>
+              </li>
+        </ul>
+    </aside>
+      <div class="layout-page">
+       <div class="content-wrapper">
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card mb-4">
+                  <h3 class="card-header"><strong>Business Details</strong></h3>
+                  <div class="card-body">
+                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                      <img src="plugins/assets/img/avatars/1.png" alt="user-avatar" class="d-block rounded-circle"
+                        height="100" width="100" id="uploadedAvatar" />
+                      <div class="button-wrapper">
+                        <label for="upload" class="btn btn-success me-2 mb-4" tabindex="0">
+                          <span class="d-none d-sm-block">Upload new photo</span>
+                          <i class="bx bx-upload d-block d-sm-none"></i>
+                          <input type="file" id="upload" class="account-file-input" hidden
+                            accept="image/png, image/jpeg" />
+                        </label>
+                        <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
+                          <i class="bx bx-reset d-block d-sm-none"></i>
+                          <span class="d-none d-sm-block">Reset</span>
+                        </button>
+                        <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-0" />
+                  <div class="card-body">
+                    <form id="formAccountSettings" method="POST" onsubmit="return false">
+                      <div class="row">
+                        <div class="mb-3 col-md-12">
+                          <label for="businessname" class="form-label">Buisness Name</label>
+                          <input class="form-control" type="text" id="businessName" name="BuisnessName"
+                            placeholder="Business Name" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                          <label for="contactnumber" class="form-label">Contact Number</label>
+                          <input class="form-control" type="number" id="contactNumber" name="contactNumber"
+                            placeholder="Contact Number" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                          <label for="address" class="form-label">Address</label>
+                          <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                          <label class="form-label" for="email">email</label>
+                          <input type="email" id="email" name="email" class="form-control" placeholder="Email" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                          <label class="form-label" for="country">Line of Buisness</label>
+                          <select id="country" class="select2 form-select">
+                            <option value="">Select </option>
+                            <option value="Australia">Australia</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Canada">Canada</option>
+                            <option value="China">China</option>
+                            <option value="France">France</option>
+                            <option value="Germany">Germany</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Korea">Korea, Republic of</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Russia">Russian Federation</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                          </select>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                          <label for="date" class="form-label">Year Established</label>
+                          <input class="form-control" type="date" id="yearEstablished" name="yearEstablished"
+                            placeholder="Year Established" />
+                        </div>
+                        <div class="mb-3 col-md-3">
+                          <label for="time" class="form-label">Opening Hours</label>
+                          <input class="form-control" type="time" id="Opening" name="opening" />
+                        </div>
+                        <div class="mb-3 col-md-3">
+                          <label for="time" class="form-label">Closing Hours</label>
+                          <input class="form-control" type="time" id="Closing" name="closing" />
+                        </div>
+                        <div class="mb-3 col-md-12">
+                          <label class="form-label" for="Branches">Branches</label>
+                          <input type="text" id="branch" name="branch" class="form-control" placeholder="Branches" />
+                        </div>
+                        <div class="mb-3 col-md-3">
+                          <label for="address" class="form-label">Website</label>
+                          <input type="url" class="form-control" id="link" name="wLink" placeholder="www.example.com" />
+                        </div>
+                        <div class="mb-3 col-md-3">
+                          <label for="state" class="form-label">Facebook</label>
+                          <input class="form-control" type="text" id="fb" name="facebook"
+                            placeholder="www.facebook.com/example" />
+                        </div>
+                        <div class="mb-3 col-md-3">
+                          <label for="zipCode" class="form-label">Instagram</label>
+                          <input type="url" class="form-control" id="ig" name="instagram"
+                            placeholder="www.instagram.com/example" />
+                        </div>
+                        <div class="mb-3 col-md-3">
+                          <label for="zipCode" class="form-label">Twitter</label>
+                          <input type="url" class="form-control" id="ig" name="instagram"
+                            placeholder="www.instagram.com/example" />
+                        </div>
+                      </div>
+                      <div class="mt-2">
+                        <button type="submit" class="btn btn-success me-2">Save changes</button>
+                        <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-backdrop fade"></div>
+        </div>
+      </div>
+    </div>
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+
+  <script src="plugins/assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="plugins/assets/vendor/js/bootstrap.js"></script>
+  <script src="plugins/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="plugins/assets/vendor/js/menu.js"></script>
+  <script src="plugins/assets/js/main.js"></script>
+
+</body>
+</html>
